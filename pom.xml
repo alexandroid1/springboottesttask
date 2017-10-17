@@ -63,16 +63,17 @@
 			<artifactId>spring-web</artifactId>
 		</dependency>
 
-		<!-- для ускорения сетевой обработки-->
-		<dependency>
-			<groupId>org.apache.httpcomponentsp</groupId>
-			<artifactId>httpclient</artifactId>
-		</dependency>
-
 		<!-- для csv-->
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-csv</artifactId>
+		</dependency>
+
+		<!-- для ускорения сетевой обработки-->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.3.4</version>
 		</dependency>
 
 	</dependencies>
