@@ -11,7 +11,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.http.client.HttpComponentsAsyncClientHttpRequestFactory;
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 import org.apache.http.impl.client.HttpClientBuilder;
 
@@ -32,8 +32,8 @@ public class SpringboottesttaskApplication implements CommandLineRunner {
 	CsvSuggestionConverter csvSuggestionConverter;
 
 	@Bean
-	public RestTemplate restTemplate(){
-		return new RestTemplate(new HttpComponentsAsyncClientHttpRequestFactory(HttpClientBuilder.create().build));
+	public RestTemplate restTemplate() {
+		return new RestTemplate(new HttpComponentsClientHttpRequestFactory(HttpClientBuilder.create().build()));
 	}
 
 	public static void main(String[] args) {
