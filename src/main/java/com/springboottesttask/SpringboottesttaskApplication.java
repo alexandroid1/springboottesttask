@@ -2,6 +2,7 @@ package com.springboottesttask;
 
 import com.google.common.collect.ImmutableList;
 
+import com.springboottesttask.service.CsvSuggestionConverter;
 import com.springboottesttask.service.CsvSuggestionWriter;
 import com.springboottesttask.service.GoEuroApiClient;
 
@@ -27,7 +28,8 @@ public class SpringboottesttaskApplication implements CommandLineRunner {
 	@Autowired
 	private GoEuroApiClient goEuroApiClient;
 
-
+	@Autowired
+	CsvSuggestionConverter csvSuggestionConverter;
 
 	@Bean
 	public RestTemplate restTemplate(){
